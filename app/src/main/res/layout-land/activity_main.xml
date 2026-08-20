@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <dev.producdevity.codboz.LauncherBackdropView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:importantForAccessibility="no" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:fillViewport="true"
+        android:overScrollMode="never"
+        android:scrollbarStyle="outsideInset">
+
+        <LinearLayout
+            android:id="@+id/launcher_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingHorizontal="42dp"
+            android:paddingVertical="28dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="36dp"
+                android:layout_weight="0.78"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/TextAppearance.CodBoz.Eyebrow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/runtime_eyebrow" />
+
+                <TextView
+                    style="@style/TextAppearance.CodBoz.Display.Landscape"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:text="@string/app_name_landscape" />
+
+                <View
+                    android:layout_width="72dp"
+                    android:layout_height="4dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@color/signal_red" />
+
+                <TextView
+                    style="@style/TextAppearance.CodBoz.Body"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="@string/runtime_subtitle_landscape" />
+
+                <TextView
+                    style="@style/TextAppearance.CodBoz.Meta"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:text="@string/legal_note" />
+
+                <Button
+                    android:id="@+id/third_party_notices_button"
+                    style="@style/Widget.CodBoz.TextButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="4dp"
+                    android:text="@string/third_party_notices" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.22"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/status_panel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/panel_background"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <View
+                            android:id="@+id/status_indicator"
+                            android:layout_width="9dp"
+                            android:layout_height="9dp"
+                            android:background="@drawable/status_indicator_off" />
+
+                        <TextView
+                            android:id="@+id/status_title"
+                            style="@style/TextAppearance.CodBoz.Section"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="11dp"
+                            android:layout_weight="1"
+                            android:text="@string/status_checking" />
+
+                        <TextView
+                            android:id="@+id/status_badge"
+                            style="@style/TextAppearance.CodBoz.Badge"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/badge_background"
+                            android:paddingHorizontal="9dp"
+                            android:paddingVertical="5dp"
+                            android:text="@string/badge_arm64" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/status_text"
+                        style="@style/TextAppearance.CodBoz.Body"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="9dp"
+                        android:text="@string/status_checking_detail" />
+
+                    <TextView
+                        android:id="@+id/status_meta"
+                        style="@style/TextAppearance.CodBoz.Meta"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="7dp"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/crash_diagnostics_panel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/panel_background"
+                    android:orientation="vertical"
+                    android:padding="14dp"
+                    android:visibility="gone">
+
+                    <TextView
+                        style="@style/TextAppearance.CodBoz.Section"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/previous_failure" />
+
+                    <TextView
+                        android:id="@+id/crash_diagnostics_reason"
+                        style="@style/TextAppearance.CodBoz.Body"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="@string/previous_failure_fallback" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/crash_copy_diagnostics_button"
+                            style="@style/Widget.CodBoz.SecondaryButton"
+                            android:layout_width="0dp"
+                            android:layout_height="42dp"
+                            android:layout_weight="1"
+                            android:text="@string/copy_diagnostics" />
+
+                        <Button
+                            android:id="@+id/crash_save_diagnostics_button"
+                            style="@style/Widget.CodBoz.SecondaryButton"
+                            android:layout_width="0dp"
+                            android:layout_height="42dp"
+                            android:layout_marginStart="8dp"
+                            android:layout_weight="1"
+                            android:text="@string/save_diagnostics" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/repair_button"
+                    style="@style/Widget.CodBoz.SecondaryButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_marginTop="8dp"
+                    android:text="@string/repair_game_data"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/launch_button"
+                        style="@style/Widget.CodBoz.PrimaryButton"
+                        android:layout_width="0dp"
+                        android:layout_height="52dp"
+                        android:layout_weight="1"
+                        android:drawableStart="@drawable/ic_play"
+                        android:drawablePadding="8dp"
+                        android:enabled="false"
+                        android:text="@string/launch_game_short" />
+
+                    <Button
+                        android:id="@+id/import_button"
+                        style="@style/Widget.CodBoz.SecondaryButton"
+                        android:layout_width="0dp"
+                        android:layout_height="52dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_weight="1"
+                        android:drawableStart="@drawable/ic_import"
+                        android:drawablePadding="8dp"
+                        android:text="@string/import_apk_short" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/panel_background"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="14dp">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/TextAppearance.CodBoz.Label"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/game_settings" />
+
+                        <TextView
+                            android:id="@+id/settings_summary"
+                            style="@style/TextAppearance.CodBoz.Body"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp" />
+                    </LinearLayout>
+
+                    <Button
+                        android:id="@+id/settings_button"
+                        style="@style/Widget.CodBoz.SecondaryButton"
+                        android:layout_width="132dp"
+                        android:layout_height="46dp"
+                        android:layout_marginStart="12dp"
+                        android:text="@string/open_settings" />
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/runtime_details_button"
+                    style="@style/Widget.CodBoz.TextButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_marginTop="4dp"
+                    android:drawableEnd="@drawable/ic_chevron"
+                    android:text="@string/runtime_details" />
+
+                <TextView
+                    android:id="@+id/diagnostics_text"
+                    style="@style/TextAppearance.CodBoz.Diagnostics"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/panel_background"
+                    android:padding="14dp"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/copy_diagnostics_button"
+                        style="@style/Widget.CodBoz.SecondaryButton"
+                        android:layout_width="0dp"
+                        android:layout_height="44dp"
+                        android:layout_weight="1"
+                        android:text="@string/copy_diagnostics"
+                        android:visibility="gone" />
+
+                    <Button
+                        android:id="@+id/export_diagnostics_button"
+                        style="@style/Widget.CodBoz.SecondaryButton"
+                        android:layout_width="0dp"
+                        android:layout_height="44dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_weight="1"
+                        android:text="@string/save_diagnostics"
+                        android:visibility="gone" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>

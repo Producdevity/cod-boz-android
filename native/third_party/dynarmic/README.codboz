@@ -1,0 +1,9 @@
+Dynarmic vendored snapshot.
+
+Source: https://github.com/lioncash/dynarmic (mirror of merryhime/dynarmic).
+Version: 6.7.0, commit a41c380 (2024-03-03).
+License: ISC (see LICENSE.txt). Dependencies under `externals/` retain their
+upstream licenses.
+
+Vendored so host, Android, and CI builds do not fetch native dependencies. To
+upgrade, replace this tree and update the pinned version and commit above.

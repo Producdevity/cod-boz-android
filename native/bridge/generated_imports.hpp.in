@@ -1,0 +1,11 @@
+#pragma once
+
+#include <array>
+#include <string_view>
+
+namespace codboz {
+
+inline constexpr std::array<std::string_view, @SOURCE_IMPORT_COUNT@> kSourceImports = {{
+@SOURCE_IMPORT_ENTRIES@}};
+
+} // namespace codboz

@@ -1,0 +1,31 @@
+COD BOZ Android
+Copyright (c) 2026 Producdevity
+
+This program is free software: you can redistribute it and/or modify it under
+the terms of the GNU General Public License as published by the Free Software
+Foundation, either version 3 of the License, or (at your option) any later
+version.
+
+This program is distributed without any warranty. See LICENSE for the complete
+license terms.
+
+This product includes third-party software:
+
+- Dynarmic, ISC license
+- Boost header subset, Boost Software License 1.0
+- {fmt}, MIT license with binary redistribution exception
+- mcl, MIT license
+- Oaknut, MIT license
+- robin-map, MIT license
+- LZMA SDK, public domain
+- LLVM libc++ runtime, Apache License 2.0 with LLVM exceptions and bundled terms
+- Kotlin standard library, Apache License 2.0
+- JetBrains annotations, Apache License 2.0
+
+S3E loader and runtime semantics are adapted from the MIT-licensed
+cod-boz-port reference implementation.
+
+The complete copyright notices and license terms are available in the app
+under Open-source licenses and in app/src/main/assets/third_party_notices.txt.
+The original license files remain beside each vendored dependency under
+native/third_party/.

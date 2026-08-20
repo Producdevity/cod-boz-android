@@ -1,0 +1,3 @@
+multiplayer_server=boz-online.xubi.org
+player_name=Player
+voice_chat_enabled=0

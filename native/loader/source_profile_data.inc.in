@@ -1,0 +1,23 @@
+inline constexpr std::string_view kSupportedApkSha256 = "@SOURCE_APK_SHA256@";
+inline constexpr std::string_view kSupportedPackage = "@SOURCE_APK_PACKAGE@";
+inline constexpr uint32_t kSupportedVersionCode = @SOURCE_APK_VERSION_CODE@u;
+inline constexpr std::string_view kSupportedVersionName = "@SOURCE_APK_VERSION_NAME@";
+inline constexpr uint32_t kSupportedMinSdk = @SOURCE_APK_MIN_SDK@u;
+inline constexpr uint32_t kSupportedTargetSdk = @SOURCE_APK_TARGET_SDK@u;
+inline constexpr std::string_view kSupportedSignerCertificateSha256 =
+    "@SOURCE_APK_SIGNER_SHA256@";
+inline constexpr uint32_t kSupportedS3eArch = @SOURCE_GUEST_S3E_ARCH@u;
+inline constexpr std::string_view kSupportedGuestArchitecture = "@SOURCE_GUEST_ARCHITECTURE@";
+inline constexpr uint64_t kSupportedGuestPackedSize = @SOURCE_GUEST_PACKED_SIZE@ull;
+inline constexpr std::string_view kSupportedGuestPackedSha256 =
+    "@SOURCE_GUEST_PACKED_SHA256@";
+inline constexpr uint64_t kSupportedGuestUnpackedSize = @SOURCE_GUEST_UNPACKED_SIZE@ull;
+inline constexpr std::string_view kSupportedGuestUnpackedSha256 =
+    "@SOURCE_GUEST_UNPACKED_SHA256@";
+inline constexpr std::string_view kResourceBaseUrl = "@SOURCE_RESOURCE_BASE_URL@";
+
+inline constexpr std::array<ResourceArchiveProfile, @SOURCE_ARCHIVE_COUNT@> kResourceArchives = {{
+@SOURCE_ARCHIVE_ENTRIES@}};
+
+inline constexpr std::array<ExtensionProfile, @SOURCE_EXTENSION_COUNT@> kExtensionProfiles = {{
+@SOURCE_EXTENSION_ENTRIES@}};

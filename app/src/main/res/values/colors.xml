@@ -1,0 +1,12 @@
+<resources>
+    <color name="ink">#08090A</color>
+    <color name="panel">#D90F1113</color>
+    <color name="panel_stroke">#2931383E</color>
+    <color name="paper">#F1EEE8</color>
+    <color name="muted">#A6A39D</color>
+    <color name="dim">#6F7377</color>
+    <color name="signal_red">#D62B22</color>
+    <color name="signal_red_pressed">#A81E18</color>
+    <color name="signal_green">#62B784</color>
+    <color name="launcher_icon_background">#08090A</color>
+</resources>

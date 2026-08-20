@@ -1,0 +1,134 @@
+<resources>
+    <style name="Theme.CodBoz" parent="android:Theme.Material.NoActionBar">
+        <item name="android:colorAccent">@color/signal_red</item>
+        <item name="android:alertDialogTheme">@style/Theme.CodBoz.AlertDialog</item>
+        <item name="android:fontFamily">sans</item>
+        <item name="android:navigationBarColor">@color/ink</item>
+        <item name="android:statusBarColor">@color/ink</item>
+        <item name="android:windowActionModeOverlay">true</item>
+        <item name="android:windowBackground">@color/ink</item>
+        <item name="android:windowLightStatusBar">false</item>
+    </style>
+
+    <style name="Theme.CodBoz.AlertDialog" parent="android:style/Theme.Material.Dialog.Alert">
+        <item name="android:colorAccent">@color/signal_red</item>
+        <item name="android:fontFamily">sans</item>
+        <item name="android:textColorPrimary">@color/paper</item>
+        <item name="android:textColorSecondary">@color/muted</item>
+        <item name="android:windowBackground">@drawable/dialog_background</item>
+    </style>
+
+    <style name="TextAppearance.CodBoz.Display" parent="@android:style/TextAppearance">
+        <item name="android:fontFamily">sans-serif-condensed</item>
+        <item name="android:letterSpacing">0.03</item>
+        <item name="android:textColor">@color/paper</item>
+        <item name="android:textSize">44sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextAppearance.CodBoz.Display.Landscape" parent="TextAppearance.CodBoz.Display">
+        <item name="android:lineSpacingExtra">-7sp</item>
+        <item name="android:textSize">56sp</item>
+    </style>
+
+    <style name="TextAppearance.CodBoz.Display.Settings" parent="TextAppearance.CodBoz.Display">
+        <item name="android:textSize">36sp</item>
+    </style>
+
+    <style name="TextAppearance.CodBoz.Eyebrow" parent="@android:style/TextAppearance">
+        <item name="android:fontFamily">sans-serif-condensed</item>
+        <item name="android:letterSpacing">0.18</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textColor">@color/signal_red</item>
+        <item name="android:textSize">11sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextAppearance.CodBoz.Section" parent="@android:style/TextAppearance">
+        <item name="android:fontFamily">sans-serif-condensed</item>
+        <item name="android:letterSpacing">0.03</item>
+        <item name="android:textColor">@color/paper</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextAppearance.CodBoz.Body" parent="@android:style/TextAppearance">
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:lineSpacingExtra">2dp</item>
+        <item name="android:textColor">@color/muted</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="TextAppearance.CodBoz.Meta" parent="@android:style/TextAppearance">
+        <item name="android:fontFamily">sans-serif-monospace</item>
+        <item name="android:letterSpacing">0.02</item>
+        <item name="android:textColor">@color/dim</item>
+        <item name="android:textSize">11sp</item>
+    </style>
+
+    <style name="TextAppearance.CodBoz.Label" parent="@android:style/TextAppearance">
+        <item name="android:fontFamily">sans-serif-condensed</item>
+        <item name="android:letterSpacing">0.1</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textColor">@color/muted</item>
+        <item name="android:textSize">11sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextAppearance.CodBoz.Badge" parent="@android:style/TextAppearance">
+        <item name="android:fontFamily">sans-serif-condensed</item>
+        <item name="android:letterSpacing">0.1</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textColor">@color/muted</item>
+        <item name="android:textSize">10sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextAppearance.CodBoz.Diagnostics" parent="@android:style/TextAppearance">
+        <item name="android:fontFamily">sans-serif-monospace</item>
+        <item name="android:lineSpacingExtra">4dp</item>
+        <item name="android:textColor">@color/muted</item>
+        <item name="android:textIsSelectable">true</item>
+        <item name="android:textSize">11sp</item>
+    </style>
+
+    <style name="Widget.CodBoz.PrimaryButton" parent="android:style/Widget.Material.Button">
+        <item name="android:background">@drawable/button_primary</item>
+        <item name="android:fontFamily">sans-serif-condensed</item>
+        <item name="android:gravity">center</item>
+        <item name="android:letterSpacing">0.1</item>
+        <item name="android:minHeight">0dp</item>
+        <item name="android:minWidth">0dp</item>
+        <item name="android:paddingStart">18dp</item>
+        <item name="android:paddingEnd">18dp</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textColor">@color/paper</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="Widget.CodBoz.SecondaryButton" parent="Widget.CodBoz.PrimaryButton">
+        <item name="android:background">@drawable/button_secondary</item>
+        <item name="android:textColor">@color/muted</item>
+    </style>
+
+    <style name="Widget.CodBoz.TextButton" parent="Widget.CodBoz.PrimaryButton">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingStart">0dp</item>
+        <item name="android:paddingEnd">0dp</item>
+        <item name="android:textColor">@color/muted</item>
+    </style>
+
+    <style name="Widget.CodBoz.EditText" parent="android:style/Widget.Material.EditText">
+        <item name="android:background">@drawable/input_background</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:paddingStart">14dp</item>
+        <item name="android:paddingEnd">14dp</item>
+        <item name="android:selectAllOnFocus">false</item>
+        <item name="android:textColor">@color/paper</item>
+        <item name="android:textColorHint">@color/dim</item>
+        <item name="android:textCursorDrawable">@null</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+</resources>

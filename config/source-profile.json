@@ -1,0 +1,55 @@
+{
+  "schema_version": 1,
+  "source_apk": {
+    "sha256": "359ee68b6e0a3a66e921ec9b955b290dedb93135fd3c20904bc1bb6f47b5499d",
+    "package": "com.activision.boz",
+    "version_code": 1045111,
+    "version_name": "1.0.11",
+    "min_sdk": 10,
+    "target_sdk": 14,
+    "signer_certificate_sha256": "79af5c286ed654ba73442de76668bd4fa7fc92ecc30031678beca87c7f610070",
+    "components": [
+      { "type": "activity", "name": "com.activision.boz.Main" },
+      { "type": "activity", "name": "com.ideaworks3d.marmalade.s3eAndroidGooglePlayBilling.PurchaseProxy" },
+      { "type": "activity", "name": "com.sec.android.iap.lib.activity.InboxActivity" },
+      { "type": "activity", "name": "com.sec.android.iap.lib.activity.PaymentActivity" },
+      { "type": "activity", "name": "com.sec.android.iap.lib.activity.ItemActivity" },
+      { "type": "activity", "name": "com.openfeint.internal.ui.IntroFlow" },
+      { "type": "activity", "name": "com.openfeint.api.ui.Dashboard" },
+      { "type": "activity", "name": "com.openfeint.internal.ui.Settings" },
+      { "type": "activity", "name": "com.openfeint.internal.ui.NativeBrowser" },
+      { "type": "service", "name": "com.ideaworks3d.marmalade.s3eAndroidMarketBilling.s3eAndroidMarketBilling" },
+      { "type": "receiver", "name": "com.ideaworks3d.marmalade.s3eAndroidMarketBilling.s3eAndroidMarketBillingReceiver" },
+      { "type": "provider", "name": "com.ideaworks3d.marmalade.VFSProvider", "exported": false }
+    ]
+  },
+  "guest": {
+    "s3e_arch": 268,
+    "architecture": "ARM32 (A32/Thumb)",
+    "packed_size": 1902539,
+    "packed_sha256": "f458c15a7111779ad320af377d0bb751294119788ba06d430bee0cc977539fee",
+    "unpacked_size": 4550559,
+    "unpacked_sha256": "dbf342663fcd8c7f8fcedced1693eb532cbea8053ef472c0cb837323f3b57d95"
+  },
+  "resources": {
+    "base_url": "http://cdn-boz-android.callofduty.com/PROD/CODBOZ/1_0_9/",
+    "archives": [
+      {
+        "name": "blackops_etc.dz",
+        "size": 487603915,
+        "sha256": "670cefce1951f1fb710d9c9d00d6103f4b81379c414885057af450a897baaedc"
+      },
+      {
+        "name": "blackops_gles1.dz",
+        "size": 337594086,
+        "sha256": "60846cf7a121ebaa200be82bd6811adcec44c607414b41086a6ffa1bd339b12c"
+      }
+    ]
+  },
+  "extensions": [
+    { "name": "s3eTouchpad", "hash": "1dbd7ce8" },
+    { "name": "s3eZeroConf", "hash": "9f590656" },
+    { "name": "IsAudioUnit", "hash": "9b347d33" },
+    { "name": "IsDevice", "hash": "e7c6ef51" }
+  ]
+}

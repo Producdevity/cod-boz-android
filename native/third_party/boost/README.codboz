@@ -1,0 +1,9 @@
+Vendored Boost header subset.
+
+Boost Software License 1.0 (see LICENSE_1_0.txt copied from upstream).
+Source: Boost 1.90.0, trimmed to the header-only dependency set used by
+Dynarmic 6.7.0.
+
+Only the headers are needed (Dynarmic links Boost::boost, the header-only
+target). To refresh, copy the required headers from the matching Boost source
+tree and verify clean host and Android builds.

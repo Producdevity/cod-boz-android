@@ -1,0 +1,38 @@
+*.iml
+.idea/
+.DS_Store
+.agents/
+AGENTS.md
+
+# Build outputs
+build/
+.build/
+.gradle/
+.kotlin/
+captures/
+.cxx/
+local.properties
+__pycache__/
+*.py[cod]
+
+# Native build caches
+*.o
+*.obj
+
+# Editor / OS
+*.swp
+*~
+
+# Secrets and local config
+*.keystore
+*.jks
+keystore.properties
+
+# Scratch and proprietary inputs (never commit game data)
+.tmp/
+app/build/generated/proprietary-test-assets/
+*.apk
+*.aab
+*.s3e
+*.s3e.unpacked
+*.dz

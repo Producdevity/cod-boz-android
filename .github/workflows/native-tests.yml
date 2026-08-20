@@ -1,0 +1,74 @@
+name: native-tests
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: native-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  host-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - name: Install native tooling
+        run: sudo apt-get update && sudo apt-get install -y clang-format shellcheck
+
+      - name: Shell check
+        run: shellcheck scripts/*.sh
+
+      - name: C++ format check
+        run: |
+          status=0
+          while IFS= read -r f; do
+            if ! clang-format --dry-run --Werror "$f" >/dev/null 2>&1; then
+              echo "format error: $f" >&2
+              status=1
+            fi
+          done < <(find native -path native/third_party -prune -o -type f \( -name '*.cpp' -o -name '*.hpp' -o -name '*.h' \) -print)
+          exit $status
+
+      - name: Inspector tests
+        run: python3 -m unittest discover -s scripts/tests -p 'test_*.py'
+
+      - name: Configure
+        run: cmake -S native -B build/host-tests -DCMAKE_BUILD_TYPE=Debug
+
+      - name: Build
+        run: cmake --build build/host-tests --parallel
+
+      - name: Test
+        run: ctest --test-dir build/host-tests --output-on-failure
+
+  sanitizers:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Configure
+        run: >-
+          cmake -S native -B build/sanitizers
+          -DCMAKE_BUILD_TYPE=Debug
+          -DCODBOZ_ENABLE_SANITIZERS=ON
+
+      - name: Build
+        run: cmake --build build/sanitizers --parallel
+
+      - name: Test
+        env:
+          ASAN_OPTIONS: detect_leaks=1:strict_string_checks=1
+          UBSAN_OPTIONS: print_stacktrace=1:halt_on_error=1
+        run: ctest --test-dir build/sanitizers --output-on-failure
